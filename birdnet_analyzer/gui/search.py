@@ -48,9 +48,8 @@ def run_export(export_state: dict):
                 )
                 audio.save_signal(sig, dest, rate)
 
-            gr.Info(
-                f"{loc.localize('embeddings-search-export-finish-info')} {export_folder}"
-            )
+            finish_info = loc.localize("embeddings-search-export-finish-info")
+            gr.Info(f"{finish_info} {export_folder}")
     else:
         gr.Info(loc.localize("embeddings-search-export-no-results-info"))
 
